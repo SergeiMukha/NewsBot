@@ -1,1 +1,0 @@
-const MTProto = require("@mtproto/core");
