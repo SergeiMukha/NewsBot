@@ -42,4 +42,4 @@ async function launchBot(lastTitle) {
 }
 
 launchBot("")
-console.log("Bot Has Been Started")
+console.log("Bot JS Has Been Started")
