@@ -34,6 +34,8 @@ async def handler(event):
         await client.send_file(entity=-1001685738658, file=message.video, caption=message.text)
     elif message.photo:
         await client.send_file(entity=-1001685738658, file=message.photo, caption=message.text)
+    else:
+        await client.send_message(entity=-1001685738658, message=message.text)
 
 # Running Client
 print("Bot Python Has Been Started")
