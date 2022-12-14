@@ -8,6 +8,7 @@ load_dotenv(find_dotenv())
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 CHAT_ID = int(os.getenv("CHAT_ID_PYTHON"))
+PARSING_CHAT = os.getenv("PARSING_CHAT")
 
 # Create Client
 client = telethon.TelegramClient("session", api_id=API_ID, api_hash=API_HASH)
@@ -16,7 +17,7 @@ client = telethon.TelegramClient("session", api_id=API_ID, api_hash=API_HASH)
 client.start()
 
 # Tracking For New Messages In Certain Chat
-@client.on(events.NewMessage(chats=('oko_original')))
+@client.on(events.NewMessage(chats=(PARSING_CHAT)))
 async def handler(event):
 
     message = event.message
