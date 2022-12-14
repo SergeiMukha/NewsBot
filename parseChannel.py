@@ -7,6 +7,6 @@ client.start()
 
 @client.on(events.NewMessage(chats=('WeblancerJobsBot')))
 async def handler(event):
-  print(event.message.text)
+    print(event.message.text)
 
 client.run_until_disconnected()
