@@ -36,5 +36,6 @@ async def handler(event):
         await client.send_file(entity=-1001685738658, file=message.photo, caption=message.text)
 
 # Running Client
+print("Bot Has Been Started")
 client.run_until_disconnected()
 
