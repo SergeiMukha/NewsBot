@@ -1,3 +1,9 @@
+# Environment variables
 .env
+
+# Node packages
 node_modules
 package-lock.json
+
+# Session file
+session.session
