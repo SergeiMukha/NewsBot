@@ -1,4 +1,6 @@
-require("dotenv").config()
+require("dotenv").config({
+    path: "../../.env"
+})
 
 const { Telegraf } = require("telegraf");
 const got = require("got");
