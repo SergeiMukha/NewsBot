@@ -7,7 +7,7 @@ load_dotenv(find_dotenv())
 
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
-CHAT_ID = int(os.getenv("CHAT_ID_PYTHON"))
+CHAT_ID =  int(os.getenv("CHAT_ID_PYTHON"))
 PARSING_CHAT = os.getenv("PARSING_CHAT")
 
 # Create Client
@@ -23,7 +23,7 @@ async def handler(event):
     message = event.message
 
     # Removing Unnecessary Text
-    message.text = message.text.replace("[ПОДПИСАТЬСЯ](https://t.me/+ZU_MUdIOlIs2ZDMy) ✅ [Прислать контент](https://t.me/Info_ukraine_bot)", "")
+    message.text = "\n".join(message.text.split("\n")[:-1]) if "[ПОДПИСАТЬСЯ]" in message.text else message.text
 
     # Checking If There Is a Photo or a Video in Message 
     if message.video:

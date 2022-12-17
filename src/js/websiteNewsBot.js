@@ -10,6 +10,7 @@ const { getHtml, parse } = require("./parseSite");
 
 // Create Bot
 const bot = new Telegraf(process.env.BOT_TOKEN_JS)
+const CHAT_ID = parseInt(process.env.CHAT_ID_JS)
 
 // Launch Bot
 async function launchBot(lastTitle) {
@@ -32,7 +33,7 @@ async function launchBot(lastTitle) {
         img = res(".c-post__preview-picture").find("img").attr("src")
 
         // Sending Message
-        bot.telegram.sendPhoto(-1001821022552, img, {
+        bot.telegram.sendPhoto(CHAT_ID, img, {
             caption: text,
             parse_mode: "HTML"
         })
