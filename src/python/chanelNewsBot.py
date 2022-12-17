@@ -7,7 +7,7 @@ load_dotenv(find_dotenv())
 
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
-CHAT_ID =  int(os.getenv("CHAT_ID_PYTHON"))
+CHAT_ID = int(os.getenv("CHAT_ID_PYTHON"))
 PARSING_CHAT = os.getenv("PARSING_CHAT")
 
 # Create Client
